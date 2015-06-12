@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Compiling TypeScript to ES6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Compiling TypeScript to ES6 syntax</h1>
+    <p>
+        TypeScript 1.5 announced support for the import syntax of ES6.
+        As it still in beta, you'll need to explicitely install it using NPM
+    </p>
+    <pre>
+        npm install typescript@1.5.0-beta
+    </pre>
+    <p>
+        That's basically all you need to get started. Now you can use the new import syntax.
+    </p>
+    <pre>
+        import name from 'package';
+    </pre>
+    <p>
+        Unfortunately, the browsers can't work yet with this new module loading system.<br>
+        You could use a ES6 transpiler such as <a href="https://github.com/google/traceur-compiler" target="_blank">Traceur</a> or <a href="https://babeljs.io/" target="_blank">Babel</a> to rewrite the ES6 module syntax into a format that can be understood by the browser (albeit with help of an external library).
+        There are a number of formats available:
+        <ul>
+            <li>AMD</li>
+            <li>CommonJS</li>
+            <li>System.js</li>
+            <li>UMD</li>
+        </ul>
+        However we could also choose to use <a href="https://github.com/systemjs/systemjs" target="_blank">System.js</a> to allow doing this transpilation on the fly.
+    </p>
+    <p>
+        System.js allows us to choose one of thee possible transpilers:
+        <ul>
+            <li>Traceur</li>
+            <li>Babel</li>
+            <li>TypeScript</li>
+        </ul>
+    </p>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="config-es6.js"></script>
+    <script>
+        System.import('app/es6/app.js')
+    </script>
+</body>
+</html>
