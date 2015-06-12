@@ -1,11 +1,13 @@
 System.config({
     baseUrl: "node_modules",
     transpiler: "typescript",
-    typescriptOptions: {
-        target: 'ES6'
+    meta: {
+        'src/ts/app.ts': {
+            format: "es6"
+        }
     },
     map: {
-        typescript: "node_modules/typescript/bin/typescript.js",
+        typescript: "lib/typescript@v1.5-beta2/bin/typescript.js",
         app: "src/ts/app.ts"
     }
 });
