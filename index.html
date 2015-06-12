@@ -6,22 +6,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Compiling TypeScript to ES6 syntax</h1>
-    <p>
-        TypeScript 1.5 announced support for the import syntax of ES6.
-        As it still in beta, you'll need to explicitely install it using NPM
+    <h1>Getting TypeScript to play nicely with System.js</h1>
+    <p class="warning">
+        This document is #WIP. I will add a more detailed explanation in the comming days, but at least you can have a look at the source code to see it working.
     </p>
-    <pre>
-        npm install typescript@1.5.0-beta
-    </pre>
     <p>
-        That's basically all you need to get started. Now you can use the new import syntax.
+        TypeScript 1.5 announced support for the import syntax of ES6.<br>
+        Unfortunately, the browsers can't work yet with this new module loading system.
     </p>
-    <pre>
-        import name from 'package';
-    </pre>
     <p>
-        Unfortunately, the browsers can't work yet with this new module loading system.<br>
         You could use a ES6 transpiler such as <a href="https://github.com/google/traceur-compiler" target="_blank">Traceur</a> or <a href="https://babeljs.io/" target="_blank">Babel</a> to rewrite the ES6 module syntax into a format that can be understood by the browser (albeit with help of an external library).
         There are a number of formats available:
         <ul>
@@ -30,7 +23,7 @@
             <li>System.js</li>
             <li>UMD</li>
         </ul>
-        However we could also choose to use <a href="https://github.com/systemjs/systemjs" target="_blank">System.js</a> to allow doing this transpilation on the fly.
+        However we could also choose to use <a href="https://github.com/systemjs/systemjs" target="_blank">System.js</a> to do the heavy lifting for us.
     </p>
     <p>
         System.js allows us to choose one of thee possible transpilers:
@@ -39,6 +32,24 @@
             <li>Babel</li>
             <li>TypeScript</li>
         </ul>
+        For this demo I chose the TypeScript transpiler. <span class="warning">Heads up:</span> as this is all very experimental, I had to make use of beta2 of the TypeScript 1.5 release.<br>
+        You can get it from <a href=""></a>
+    </p>
+    <p>
+        Next, I configured System.js to make us of this specific TypeScript version
+    </p>
+    <pre>
+System.config({
+    baseUrl: "node_modules",
+    transpiler: "typescript",
+    map: {
+        typescript: "lib/typescript@v1.5-beta2/bin/typescript.js",
+        app: "src/ts/app.ts"
+    }
+});
+    </pre>
+    <p>
+        As you can see I configured the default search location to be node_modules.
     </p>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="config-ts.js"></script>

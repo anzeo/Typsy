@@ -1,5 +1,5 @@
 export default class Dep {
     say() {
-        alert("Derp");
+        alert("Hello from TypeScript!");
     }
 }
