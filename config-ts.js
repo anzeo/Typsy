@@ -1,11 +1,11 @@
 System.config({
     baseUrl: "node_modules",
-    transpiler: "babel",
+    transpiler: "typescript",
     typescriptOptions: {
-        module: 'commonjs'
+        target: 'ES6'
     },
     map: {
-        babel: "node_modules/babel-core/browser.js",
-        app: "src"
+        typescript: "node_modules/typescript/bin/typescript.js",
+        app: "src/ts"
     }
 });
