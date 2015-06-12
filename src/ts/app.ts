@@ -1,13 +1,5 @@
-//import Dep from 'dep';
+"use strict";
 
-class Depje {
-    yell(something:String){
-        alert("Hello " + something + "!");
-    }
-}
-
-var dep = new Depje();
-
-dep.yell("world");
+alert("We're up 'n running");
 
 export default {};

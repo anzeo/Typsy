@@ -3,6 +3,6 @@ System.config({
     transpiler: "babel",
     map: {
         babel: "node_modules/babel-core/browser.js",
-        app: "src/es6"
+        app: "src/es6/app.js"
     }
 });

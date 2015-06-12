@@ -1,6 +1,5 @@
-import MyDependency from './dependency.js';
 "use strict";
-
+import MyDependency from './dependency.js';
 
 class Test {
     say(){

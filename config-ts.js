@@ -6,6 +6,6 @@ System.config({
     },
     map: {
         typescript: "node_modules/typescript/bin/typescript.js",
-        app: "src/ts"
+        app: "src/ts/app.ts"
     }
 });
