@@ -1,0 +1,32 @@
+{
+  "name": "Typsy",
+  "version": "0.0.0",
+  "description": "A playground to test TypeScript & System integration for ES6 module loading",
+  "main": "index.html",
+  "dependencies": {
+    "babel-core": "^5.5.6",
+    "typescript": "^1.5.0-beta",
+    "systemjs": "^0.17.1"
+  },
+  "devDependencies": {
+    "babel-core": "^5.5.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anzeo/Typsy.git"
+  },
+  "keywords": [
+    "angular2",
+    "system.js",
+    "typescript"
+  ],
+  "author": "Thomas Anciaux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anzeo/Typsy/issues"
+  },
+  "homepage": "https://github.com/anzeo/Typsy"
+}
