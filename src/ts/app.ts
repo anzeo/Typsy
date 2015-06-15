@@ -4,6 +4,17 @@ import Dependency from './dependency.ts';
 import {View, Component, bootstrap} from 'angular2/angular2';
 
 let dep = new Dependency();
-dep.say();
 
-export default {};
+@Component({
+    selector: 'my-app'
+})
+@View({
+    template: '<h1>Hello {{ name }}</h1>'
+})
+class MyAppComponent {
+    name: string;
+
+    constructor() {
+        this.name = 'Alice';
+    }
+}
