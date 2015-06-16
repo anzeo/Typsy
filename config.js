@@ -7,7 +7,10 @@ System.config({
         },
         '/node_modules/angular2': {
             main: 'angular2',
-            defaultExtension: 'js'
+            defaultExtension: 'js',
+            map: {
+                'rx': './node_modules/rx/index.js'
+            }
         }
     },
     map: {
