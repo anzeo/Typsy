@@ -11,6 +11,7 @@ System.config({
         }
     },
     paths: {
+        // Added a path for ng2 because internal they require modules as 'angular2/src/...'
         "angular2/*": "/node_modules/angular2/*"
     },
     map: {

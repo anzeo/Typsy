@@ -21,8 +21,7 @@
   },
   "keywords": [
     "angular2",
-    "system.js",
-    "typescript"
+    "system.js"
   ],
   "author": "Thomas Anciaux",
   "license": "ISC",
