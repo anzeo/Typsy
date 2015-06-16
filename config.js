@@ -5,11 +5,15 @@ System.config({
             main: 'app',
             defaultExtension: 'ts'
         },
+        '/node_modules/angular2/node_modules/rx': {
+            main: 'index',
+            defaultExtension: 'js'
+        },
         '/node_modules/angular2': {
             main: 'angular2',
             defaultExtension: 'js',
             map: {
-                'rx': './node_modules/rx/index.js'
+                'rx': './node_modules/rx'
             }
         }
     },
